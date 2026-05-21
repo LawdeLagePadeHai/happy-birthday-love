@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday My Love ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#080010;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body::-webkit-scrollbar{
+      width:6px;
+    }
+
+    body::-webkit-scrollbar-thumb{
+      background:#ff4fa3;
+      border-radius:20px;
+    }
+
+    /* BACKGROUND */
+
+    .bg{
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      background:
+      radial-gradient(circle at top left,#ff4fa344,transparent 30%),
+      radial-gradient(circle at bottom right,#a855f744,transparent 30%),
+      #080010;
+    }
+
+    .stars{
+      position:fixed;
+      inset:0;
+      z-index:-1;
+      overflow:hidden;
+    }
+
+    .star{
+      position:absolute;
+      color:white;
+      animation:float linear infinite;
+      opacity:.7;
+    }
+
+    @keyframes float{
+      from{
+        transform:translateY(100vh);
+      }
+      to{
+        transform:translateY(-120vh);
+      }
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:clamp(50px,10vw,120px);
+      font-family:'Great Vibes',cursive;
+      color:#ff6db5;
+      text-shadow:0 0 30px #ff4fa3;
+    }
+
+    .hero p{
+      margin-top:20px;
+      font-size:20px;
+      color:#ffd4e8;
+      max-width:700px;
+      line-height:1.7;
+    }
+
+    .btn{
+      margin-top:40px;
+      padding:15px 35px;
+      border:none;
+      border-radius:50px;
+      background:linear-gradient(45deg,#ff4fa3,#a855f7);
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+      transition:.3s;
+      box-shadow:0 0 25px #ff4fa399;
+    }
+
+    .btn:hover{
+      transform:scale(1.07);
+      box-shadow:0 0 45px #ff4fa3;
+    }
+
+    section{
+      padding:100px 8%;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .title h2{
+      font-size:55px;
+      color:#ff7fc0;
+      font-family:'Great Vibes',cursive;
+    }
+
+    .title p{
+      margin-top:10px;
+      color:#d9b6cc;
+    }
+
+    /* LETTER */
+
+    .letter-box{
+      max-width:900px;
+      margin:auto;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      padding:50px;
+      border-radius:30px;
+      backdrop-filter:blur(20px);
+      line-height:2;
+      color:#ffe5f1;
+      box-shadow:0 0 40px rgba(255,79,163,.15);
+    }
+
+    .letter-box h3{
+      font-family:'Great Vibes',cursive;
+      font-size:50px;
+      margin-bottom:25px;
+      color:#ff8dc8;
+    }
+
+    /* REASONS */
+
+    .reasons{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:25px;
+      padding:35px;
+      text-align:center;
+      transition:.4s;
+      backdrop-filter:blur(15px);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 30px #ff4fa366;
+    }
+
+    .card span{
+      font-size:50px;
+      display:block;
+      margin-bottom:20px;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#ff8fc9;
+    }
+
+    .card p{
+      color:#f6d9e8;
+      line-height:1.7;
+    }
+
+    /* COUNTDOWN */
+
+    .countdown{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-top:40px;
+    }
+
+    .time-box{
+      width:140px;
+      height:140px;
+      border-radius:25px;
+      background:rgba(255,255,255,.05);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      border:1px solid rgba(255,255,255,.1);
+      backdrop-filter:blur(15px);
+      box-shadow:0 0 20px rgba(255,79,163,.12);
+    }
+
+    .time-box h1{
+      font-size:42px;
+      color:#ff8dc8;
+    }
+
+    .time-box p{
+      margin-top:8px;
+      color:#ffd9ea;
+    }
+
+    /* MUSIC */
+
+    .music-box{
+      max-width:500px;
+      margin:auto;
+      background:rgba(255,255,255,.05);
+      padding:50px;
+      border-radius:30px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.1);
+      backdrop-filter:blur(15px);
+    }
+
+    .music-box h3{
+      font-size:45px;
+      font-family:'Great Vibes',cursive;
+      color:#ff8dc8;
+      margin-bottom:15px;
+    }
+
+    .music-box p{
+      color:#ffd9ea;
+      margin-bottom:30px;
+    }
+
+    /* FINAL */
+
+    .final{
+      min-height:80vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .final h1{
+      font-size:clamp(60px,10vw,140px);
+      font-family:'Great Vibes',cursive;
+      color:#ff77bd;
+      text-shadow:0 0 40px #ff4fa3;
+    }
+
+    .final p{
+      margin-top:20px;
+      max-width:700px;
+      color:#ffd8e9;
+      line-height:2;
+      font-size:18px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#b995aa;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+
+    /* HEARTS */
+
+    .heart{
+      position:fixed;
+      font-size:20px;
+      animation:hearts 5s linear forwards;
+      z-index:9999;
+      pointer-events:none;
+    }
+
+    @keyframes hearts{
+      0%{
+        transform:translateY(0) scale(1);
+        opacity:1;
+      }
+      100%{
+        transform:translateY(-100vh) scale(2);
+        opacity:0;
+      }
+    }
+
+    @media(max-width:768px){
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .title h2{
+        font-size:45px;
+      }
+
+      .letter-box{
+        padding:30px;
+      }
+
+      .time-box{
+        width:120px;
+        height:120px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="stars" id="stars"></div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h1>Happy Birthday My Love ❤️</h1>
+
+  <p>
+    Every second with you feels magical.
+    Thank you for making my life beautiful.
+    This little website is only for the most special girl in my world.
+  </p>
+
+  <button class="btn" onclick="scrollToLetter()">
+    Open Your Surprise ✨
+  </button>
+
+</section>
+
+<!-- LETTER -->
+
+<section id="letter">
+
+  <div class="title">
+    <h2>A Letter For You</h2>
+    <p>Written straight from my heart</p>
+  </div>
+
+  <div class="letter-box">
+
+    <h3>My Love,</h3>
+
+    <p>
+      Happy Birthday to the most beautiful person in my life.<br><br>
+
+      I honestly don't even know where to start because words never feel enough when it comes to you.
+      You entered my life and somehow made everything softer, happier, calmer, and more beautiful.<br><br>
+
+      Thank you for every smile, every late-night conversation, every cute moment, every laugh, every little thing you do that makes my heart feel full.<br><br>
+
+      Since the day we met on 18th May 2024, my life has changed in the best possible way.
+      Every day with you feels like something out of a dream.<br><br>
+
+      I hope your birthday is filled with happiness, love, peace, and every beautiful thing you deserve because honestly…
+      you deserve the entire universe.<br><br>
+
+      I love you forever ❤️
+    </p>
+
+  </div>
+
+</section>
+
+<!-- REASONS -->
+
+<section>
+
+  <div class="title">
+    <h2>Reasons I Love You</h2>
+    <p>The list never ends</p>
+  </div>
+
+  <div class="reasons">
+
+    <div class="card">
+      <span>🌸</span>
+      <h3>Your Smile</h3>
+      <p>Your smile can instantly make my worst day feel perfect.</p>
+    </div>
+
+    <div class="card">
+      <span>✨</span>
+      <h3>Your Presence</h3>
+      <p>Being with you feels peaceful, warm, and safe.</p>
+    </div>
+
+    <div class="card">
+      <span>💖</span>
+      <h3>Your Heart</h3>
+      <p>You care so deeply and love so purely. That's rare.</p>
+    </div>
+
+    <div class="card">
+      <span>🌙</span>
+      <h3>Everything About You</h3>
+      <p>I don't need a reason honestly. I just love you completely.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- COUNTDOWN -->
+
+<section>
+
+  <div class="title">
+    <h2>Time Since We Met</h2>
+    <p>Since 18 May 2024 ❤️</p>
+  </div>
+
+  <div class="countdown">
+
+    <div class="time-box">
+      <h1 id="days">0</h1>
+      <p>Days</p>
+    </div>
+
+    <div class="time-box">
+      <h1 id="hours">0</h1>
+      <p>Hours</p>
+    </div>
+
+    <div class="time-box">
+      <h1 id="minutes">0</h1>
+      <p>Minutes</p>
+    </div>
+
+    <div class="time-box">
+      <h1 id="seconds">0</h1>
+      <p>Seconds</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MUSIC -->
+
+<section>
+
+  <div class="title">
+    <h2>Our Song</h2>
+    <p>Perfect — Ed Sheeran</p>
+  </div>
+
+  <div class="music-box">
+
+    <h3>Perfect ❤️</h3>
+
+    <p>
+      Click below and listen while reading this website.
+    </p>
+
+    <button class="btn" onclick="toggleMusic()" id="musicBtn">
+      Play Music ♪
+    </button>
+
+    <audio id="music" loop>
+      <source src="perfect.mp3" type="audio/mpeg">
+    </audio>
+
+  </div>
+
+</section>
+
+<!-- FINAL -->
+
+<section class="final">
+
+  <h1>I Love You Forever ❤️</h1>
+
+  <p>
+    No matter what happens in life,
+    no matter where life takes us,
+    I will always choose you.
+    Happy Birthday baby ❤️
+  </p>
+
+  <button class="btn" onclick="celebrate()">
+    Celebrate 🎉
+  </button>
+
+</section>
+
+<footer>
+  Made with ❤️ only for you
+</footer>
+
+<script>
+
+  // STARS
+
+  const stars = document.getElementById("stars");
+
+  for(let i=0;i<50;i++){
+
+    let star=document.createElement("div");
+    star.classList.add("star");
+
+    star.innerHTML=["✨","⭐","💖","🌸"][Math.floor(Math.random()*4)];
+
+    star.style.left=Math.random()*100+"%";
+
+    star.style.animationDuration=(5+Math.random()*10)+"s";
+
+    star.style.fontSize=(10+Math.random()*20)+"px";
+
+    stars.appendChild(star);
+
+  }
+
+  // SCROLL
+
+  function scrollToLetter(){
+
+    document.getElementById("letter").scrollIntoView({
+      behavior:"smooth"
+    });
+
+  }
+
+  // MUSIC
+
+  const music=document.getElementById("music");
+  const musicBtn=document.getElementById("musicBtn");
+
+  function toggleMusic(){
+
+    if(music.paused){
+
+      music.play();
+      musicBtn.innerHTML="Pause Music ⏸";
+
+    }else{
+
+      music.pause();
+      musicBtn.innerHTML="Play Music ♪";
+
+    }
+
+  }
+
+  // COUNTDOWN FIXED
+
+  const startDate = new Date("2024-05-18T00:00:00");
+
+  function updateCountdown(){
+
+    const now = new Date();
+
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000*60*60*24));
+
+    const hours = Math.floor((diff / (1000*60*60)) % 24);
+
+    const minutes = Math.floor((diff / (1000*60)) % 60);
+
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+  }
+
+  setInterval(updateCountdown,1000);
+
+  updateCountdown();
+
+  // CELEBRATION FIXED
+
+  function celebrate(){
+
+    for(let i=0;i<80;i++){
+
+      let heart=document.createElement("div");
+
+      heart.classList.add("heart");
+
+      heart.innerHTML=["❤️","💖","✨","🌸","💕"][Math.floor(Math.random()*5)];
+
+      heart.style.left=Math.random()*100+"vw";
+
+      heart.style.bottom="-20px";
+
+      heart.style.fontSize=(20+Math.random()*30)+"px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(()=>{
+        heart.remove();
+      },5000);
+
+    }
+
+  }
+
+</script>
+
+</body>
+</html>
